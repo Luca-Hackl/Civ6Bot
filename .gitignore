@@ -1,3 +1,5 @@
 config.properties
 # Project exclude paths
 /target/
+/.idea/
+/Civ6BotMaven.iml
