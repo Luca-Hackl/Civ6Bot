@@ -3,3 +3,4 @@ config.properties
 /target/
 /.idea/
 /Civ6BotMaven.iml
+/dependency-reduced-pom.xml

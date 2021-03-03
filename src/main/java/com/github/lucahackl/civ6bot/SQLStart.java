@@ -35,7 +35,7 @@ public class SQLStart {
         }
 
         try (Connection connection = DriverManager.getConnection(dbURL, username, password)) {
-            if (newmsg.substring(0, 5).equals("reset")) {
+            if (newmsg.startsWith("reset")) {
                 try {
                     return ChooseReset.Reset(numb, connection);
                 } catch (Exception e) {
@@ -43,11 +43,10 @@ public class SQLStart {
                 }
 
 
-            } else if (newmsg.substring(0, 6).equals("player")) {
+            } else if (newmsg.startsWith("player")) {
                 try {
                     ChooseReset player = new ChooseReset();
-                    String sendString = player.SettingSQL(connection, numb);
-                    return sendString;
+                    return player.SettingSQL(connection, numb);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
