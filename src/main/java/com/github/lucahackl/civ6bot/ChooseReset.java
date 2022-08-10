@@ -30,7 +30,7 @@ public class ChooseReset {
             System.out.println("Table is empty");
             Reset(numb, connection);
         }
-        return "No valid entry";
+        return "Couldn't find the player table";
     }
 
     public static String Chooser(int size, int numb, Connection connection) {
@@ -68,7 +68,7 @@ public class ChooseReset {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return "No valid entry";
+        return "Couldn't find a leader";
     }
 
 
